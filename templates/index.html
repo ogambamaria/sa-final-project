@@ -1,0 +1,33 @@
+<!--Displays the first page of the API, with links to the graphs and other pages-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+&nbsp;
+<div>
+    <h6>VADER Sentiment Analysis</h6>
+    <p>How to interpret the results:</p>
+    <p>- The compound score falls in the range -1 to 1.</p>
+    <p>- If the compound score > 0, the sentiments are mostly positive. The closer it is to 1, the more positive the sentiments.</p>
+    <p>- If the compound score < 0, the sentiments are mostly negative. The closer it is to -1, the more negative the sentiments.</p>
+    <a href="sentiment_analysis">View Sentiment Analysis Results</a>
+    <br><br>
+    <p>We can compare the compound scores for the different universities in the bar graph below:</p>
+    <a href="sentiment_bar">View Sentiment Analysis Bar Graph</a>
+</div>
+<hr>
+
+<div>
+<h6>Emotion Analysis</h6>
+<p>A custom emotion analysis algorithm was used to extract the sentiments present in the text. View the results in the bar graph below:</p>
+<a href="emotion_bar">View Emotion Analysis Bar Graph</a>
+</div>
+<hr>
+
+<div>
+<h6>Accuracy Test for the VADER Sentiment Analysis</h6>
+    <p>Using a labelled dataset (sampled from the opinions dataset), the following results were collected:</p>
+    <a href="sentiment_accuracy">View Accuracy Results</a><br>
+    <a href="sia_heatmap">View Sentiment Analysis Confusion Matrix Heat Map</a>
+</div>
+{% endblock %}

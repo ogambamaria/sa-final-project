@@ -1,0 +1,16 @@
+<!--Displays the results of the accuracy of the Vader model in the API-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+&nbsp;
+<h6>{% block title %} Sentiment Analysis Accuracy Results {% endblock %}</h6>
+<p>Using a labelled dataset of Strathmore University Opinions:</p>
+<p>Confusion Matrix: {{ cf_matrix }}</p>
+<p>Accuracy: {{ accuracy }} which is {{ ap }}%</p>
+<p>Precision: {{ precision }} which is {{ pp }}%</p>
+<p>Recall: {{ recall }} which is {{ rp }}%</p>
+<p>F1 Measure: {{ f1 }} which is {{ f1p }}%</p>
+
+<button type="button" class="btn btn-light" onclick="{{ index }}">Back</button>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!--Displays the score ratings of the sentiment analysis in the API-->
+
+{% extends 'base.html' %}
+
+{% block content %}
+&nbsp;
+<h6>{% block title %} Sentiment Analysis Results for All Opinions {% endblock %}</h6>
+<p>{{ result }}</p>
+
+<h6>Score Rating</h6>
+<p>Negative Score: {{ neg_score }}%</p>
+<p>Positive Score: {{ pos_score }}%</p>
+<p>Neutral Score: {{ neu_score }}%</p>
+<p>Compound Score: {{ com_score }}%</p>
+
+<button type="button" class="btn btn-light" onclick="{{ index }}">Back</button>
+{% endblock %}
